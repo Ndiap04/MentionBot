@@ -30,65 +30,7 @@ spam_chats = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-    chat_id = event.chat_id
-    if not event.is_private:
-        return await event.respond("ɪ ᴀᴍ ᴀʟɪᴠᴇ 🥺")
-    await event.reply(
-        "━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ ɪ ᴀᴍ ᴀʟᴇxᴀ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴛʜᴇ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs ɪɴ ᴛᴇʟᴇɢʀᴀᴍ\n✪ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ʀᴜɴ /help..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ ᴏᴡɴᴇʀ    : [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)\n┣★ ᴜᴘᴅᴀᴛᴇs › : [ᴀʟᴇxᴀ ʜᴇʟᴘ](https://t.me/AsadSupport)┓\n┣★ ʀᴇᴘᴏ › : [ᴀʟᴇxᴀ ʀᴇᴘᴏ](https://github.com/TheTeamAlexa/MentionBot)\n┗━━━━━━━━━━━━━━━━━┛\n\n💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ\nᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/Jankari_Ki_Duniya) ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━",
-        link_preview=False,
-        buttons=(
-            [
-                Button.url(
-                    "☀︎︎️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☀︎︎",
-                    "https://t.me/Alexa_MentionBot?startgroup=true",
-                ),
-            ],
-            [
-                Button.url("☀︎︎ ɢʀᴏᴜᴘ ☀︎︎︎", "https://t.me/Shayri_Music_Lovers"),
-                Button.url("☀︎︎ ᴄʜᴀɴɴᴇʟ ☀︎︎", "https://t.me/AsadSupport"),
-            ],
-            [
-                Button.url("☀︎︎ ʙʀᴏ ☀︎︎️️", "https://t.me/HarshitSharma361"),
-                Button.url("☀︎︎ ᴋɪɴɢ ☀︎︎︎", "https://t.me/Jankar_Ki_Duniya"),
-            ],
-        ),
-    )
-
-
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-    chat_id = event.chat_id
-    if not event.is_private:
-        return await event.respond("ᴅᴇᴀʀ sᴛᴀʀᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴғ 🥺")
-    helptext = "✪ ʜᴇʟᴘ ᴍᴇɴᴜ ᴏғ ᴀʟᴇxᴀ ᴍᴇɴᴛɪᴏɴ\n\n✪ ᴄᴏᴍᴍᴀɴᴅ: /mentionall\n✪ ᴄᴏᴍᴍᴀɴᴅ: /cancel ᴛᴏ ᴄᴀɴᴄᴇʟ ɢᴏɪɴɢ ᴏɴ ᴘʀᴏᴄᴇss.\n✪ ᴄᴏᴍᴍᴀɴᴅ /admin ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴀᴅᴍɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ\n✪ Yᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ ᴛᴇxᴛ ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs.\n✪ `Example: /mentionall Good Morning!`\n✪ Yᴏᴜ ᴄᴀɴ ʏᴏᴜ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴀs ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ. Bᴏᴛ ᴡɪʟʟ ᴛᴀɢ ᴜsᴇʀs ᴛᴏ ᴛʜᴀᴛ ʀᴇᴘʟɪᴇᴅ ᴍᴇsssᴀɢᴇ."
-    await event.reply(
-        helptext,
-        link_preview=False,
-        buttons=(
-            [
-                Button.url("☀︎︎ ʜᴇᴀʀᴛ", "https://t.me/Give_Me_Heart"),
-                Button.url("ʏᴏᴜᴛᴜʙᴇ ☀︎︎", "https://www.youtube.com/c/JankariKiDuniya"),
-            ]
-        ),
-    )
-
-
-@client.on(events.NewMessage(pattern="^/owner$"))
-async def help(event):
-    chat_id = event.chat_id
-    if not event.is_private:
-        return await event.respond("ᴅᴇᴀʀ sᴛᴀʀᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴғ 🥺")
-    helptext = "✪ ᴏᴡɴᴇʀ ᴍᴇɴᴜ ᴏғ ᴀʟᴇxᴀ ᴍᴇɴᴛɪᴏɴ\n\n✪ ᴍʏ ᴏᴡɴᴇʀ ɪs [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)\n✪ ᴏғғɪᴄɪᴀʟ ᴍᴇᴍʙᴇʀ ᴏғ ʀᴏᴄᴋs\n✪ ʏᴏᴜᴛᴜʙᴇ [ᴄʜᴀɴɴᴇʟ](https://www.youtube.com/c/JankariKiDuniya)\n✪ ғᴜᴛᴜʀᴇ ᴀɴᴇsᴛʜᴇᴛɪᴄ."
-    await event.reply(
-        helptext,
-        link_preview=False,
-        buttons=(
-            [
-                Button.url("☀︎︎ ʜᴇᴀʀᴛ", "https://t.me/Give_Me_Heart"),
-                Button.url("ʏᴏᴜᴛᴜʙᴇ ☀︎︎", "https://www.youtube.com/c/JankariKiDuniya"),
-            ]
-        ),
-    )
+    await event.delete()
 
 
 @client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
@@ -96,7 +38,7 @@ async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
         return await event.respond(
-            "__This command can be use in groups and channels!__"
+            "__Perintah ini dapat digunakan dalam grup dan saluran!__"
         )
 
     is_admin = False
@@ -110,10 +52,10 @@ async def mentionall(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__Only admins can mention all!__")
+        return await event.respond("__Hanya admin yang boleh mention semua!__")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("__Give me one argument!__")
+        return await event.respond("__Beri aku satu argumen!__")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
@@ -122,11 +64,11 @@ async def mentionall(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "__I can't mention members for older messages! (messages which are sent before I'm added to group)__"
+                "__Saya tidak bisa menyebut anggota untuk pesan lama! (pesan yang dikirim sebelum saya ditambahkan ke grup)__"
             )
     else:
         return await event.respond(
-            "__Reply to a message or give me some text to mention others!__"
+            "__Membalas pesan atau memberi saya beberapa teks untuk menyebutkan orang lain!__"
         )
 
     spam_chats.append(chat_id)
@@ -156,7 +98,7 @@ async def mentionall(event):
 async def _(event):
     chat_id = event.chat_id
     if event.is_private:
-        return await event.respond("sᴏʀʀʏ ʏᴏᴜ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ᴀᴅᴍɪɴ ᴏɴʟʏ ɪɴ ɢʀᴏᴜᴘ")
+        return await event.respond("__Maaf hanya bisa mention admin di grup__")
 
     is_admin = False
     try:
@@ -169,10 +111,10 @@ async def _(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs")
+        return await event.respond("__Hanya admin yang dapat menyebutkan admin grup__")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ")
+        return await event.respond("__Berikan beberapa teks untuk disebutkan berikan__")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
