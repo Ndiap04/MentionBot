@@ -123,11 +123,11 @@ async def _(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "__ɪ ᴄᴀɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ꜰᴏʀ ᴏʟᴅᴇʀ ᴍᴇssᴀɢᴇs! (ᴍᴇssᴀɢᴇs ᴡʜɪᴄʜ ᴀʀᴇ sᴇɴᴛ ʙᴇꜰᴏʀᴇ ɪ'ᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)__"
+                "__Saya tidak dapat menyebut anggota untuk pesan yang lebih lama,(pesan yang dikirim sebelum saya ditambahkan ke grup)__"
             )
     else:
         return await event.respond(
-            "__ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs!__"
+            "__Balas pesan atau beri saya beberapa teks untuk menyebutkan orang lain!__"
         )
 
     spam_chats.append(chat_id)
@@ -157,16 +157,16 @@ async def _(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
     if not event.chat_id in spam_chats:
-        return await event.respond("__There is no proccess on going...__")
+        return await event.respond("__Tidak ada proses yang berjalan...__")
     else:
         try:
             spam_chats.remove(event.chat_id)
         except:
             pass
-        return await event.respond("__Stopped.__")
+        return await event.respond("__Berhenti.__")
 
 
-print(">> ASAD ALEXA WORKING <<")
+print(">> BottyCu WORKING <<")
 client.run_until_disconnected()
 
 
