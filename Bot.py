@@ -1,4 +1,4 @@
-# A Powerful Music And Management Bot
+ # A Powerful Music And Management Bot
 # Property Of Rocks Indian Largest Chatting Group
 # Rocks © @Dr_Asad_Ali © Rocks
 # Owner Asad Ali + Kattai Massom + Abhimanyu Singh
@@ -28,7 +28,7 @@ client = TelegramClient("client", api_id, api_hash).start(bot_token=bot_token)
 spam_chats = []
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
+@client.on(events.NewMessage(pattern="^/ksksnsjf$"))
 async def start(event):
     chat_id = event.chat_id
     if not event.is_private:
@@ -55,7 +55,7 @@ async def start(event):
     )
 
 
-@client.on(events.NewMessage(pattern="^/help$"))
+@client.on(events.NewMessage(pattern="^/jdjdjdjd$"))
 async def help(event):
     chat_id = event.chat_id
     if not event.is_private:
@@ -73,7 +73,7 @@ async def help(event):
     )
 
 
-@client.on(events.NewMessage(pattern="^/owner$"))
+@client.on(events.NewMessage(pattern="^/jsjsjdnnbf$"))
 async def help(event):
     chat_id = event.chat_id
     if not event.is_private:
@@ -96,7 +96,7 @@ async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
         return await event.respond(
-            "ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘs ᴀɴᴅ ᴄʜᴀɴɴᴇʟs"
+            "Perintah ini dapat digunakan dalam grup dan channel"
         )
 
     is_admin = False
@@ -110,10 +110,10 @@ async def mentionall(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ")
+        return await event.respond("Hanya admin yang bisa menyebutkan")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("ɢɪᴠᴇ ᴍᴇ ᴏɴᴇ ᴀʀɢᴜᴍᴇɴᴛ")
+        return await event.respond("Beri saya satu argumen")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
@@ -122,11 +122,11 @@ async def mentionall(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "ɪ ᴄᴀɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ꜰᴏʀ ᴏʟᴅᴇʀ ᴍᴇssᴀɢᴇs! (ᴍᴇssᴀɢᴇs ᴡʜɪᴄʜ ᴀʀᴇ sᴇɴᴛ ʙᴇꜰᴏʀᴇ ɪ'ᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)"
+                "Saya tidak dapat menyebutkan anggota untuk pesan lama (pesan yang dikirim sebelum saya ditambahkan ke grup)"
             )
     else:
         return await event.respond(
-            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs"
+            "Balas pesan atau beri saya pesan untuk menyebutkan yang lain."
         )
 
     spam_chats.append(chat_id)
@@ -156,7 +156,7 @@ async def mentionall(event):
 async def _(event):
     chat_id = event.chat_id
     if event.is_private:
-        return await event.respond("sᴏʀʀʏ ʏᴏᴜ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ᴀᴅᴍɪɴ ᴏɴʟʏ ɪɴ ɢʀᴏᴜᴘ")
+        return await event.respond("Maaf, anda hanya dapat menyebutkan admin di grup")
 
     is_admin = False
     try:
@@ -169,10 +169,10 @@ async def _(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs")
+        return await event.respond("Hanya admin yang dapat menyebutkan admin grup")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ")
+        return await event.respond("Berikan saya pesan untuk menyebutkannya")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
@@ -181,11 +181,11 @@ async def _(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "ɪ ᴄᴀɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ꜰᴏʀ ᴏʟᴅᴇʀ ᴍᴇssᴀɢᴇs! (ᴍᴇssᴀɢᴇs ᴡʜɪᴄʜ ᴀʀᴇ sᴇɴᴛ ʙᴇꜰᴏʀᴇ ɪ'ᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)"
+                "Saya tidak dapat menyebutkan anggota untuk pesan lama (pesan yang dikirim sebelum saya ditambahkan ke grup"
             )
     else:
         return await event.respond(
-            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs!"
+            "Balas pesan atau beri saya pesan untuk menyebutkan yang lain."
         )
 
     spam_chats.append(chat_id)
@@ -215,16 +215,16 @@ async def _(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
     if not event.chat_id in spam_chats:
-        return await event.respond("ᴛʜᴇʀᴇ ɪs ɴᴏ ᴘʀᴏᴄᴄᴇss ᴏɴ ɢᴏɪɴɢ...")
+        return await event.respond("Tidak ada proses yang sedang berjalan...")
     else:
         try:
             spam_chats.remove(event.chat_id)
         except:
             pass
-        return await event.respond("sᴛᴏᴘᴘᴇᴅ.")
+        return await event.respond("berhenti.")
 
 
-print(">> ASAD ALEXA WORKING <<")
+print(">> BOTTYCU BERJALAN <<")
 client.run_until_disconnected()
 
 
